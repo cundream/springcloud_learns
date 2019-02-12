@@ -1,10 +1,7 @@
 package com.github.com;
 
 
-
-
-public class AppTest 
-{
+public class AppTest {
     /**
      * Rigorous Test :-)
      */

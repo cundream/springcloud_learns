@@ -30,7 +30,7 @@ public class UploadClientTest {
     private UploadClient uploadClient;
 
     @Test
-    public void testHandleFileUpload(){
+    public void testHandleFileUpload() {
         File file = new File("test.txt");
         DiskFileItem fileItem = (DiskFileItem) new DiskFileItemFactory().createItem("file",
                 MediaType.TEXT_PLAIN_VALUE, true, file.getName());
@@ -42,7 +42,7 @@ public class UploadClientTest {
         }
 
         MultipartFile multi = new CommonsMultipartFile(fileItem);
-        System.out.println("返回结果-----------" +uploadClient.handleFileUpload(multi));
+        System.out.println("返回结果-----------" + uploadClient.handleFileUpload(multi));
 
     }
 
