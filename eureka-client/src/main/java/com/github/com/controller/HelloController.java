@@ -17,7 +17,9 @@ public class HelloController {
     DiscoveryClient discoveryClient;
 
     @GetMapping("/hello")
-    public String hello() {
+    public String hello() throws InterruptedException {
+        //为触发降级，逻辑做一些延迟
+        //Thread.sleep(6000L);
         String services = "Services: " + discoveryClient.getServices();
         System.out.println(services);
         return services;
